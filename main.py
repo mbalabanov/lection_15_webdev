@@ -48,4 +48,4 @@ def simpleshop():
 
 # Wenn dieses Modul das Hauptmodul ist, dann starten wir Flask
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
