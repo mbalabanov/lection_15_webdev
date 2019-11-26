@@ -1,0 +1,701 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SmartNinja Web Development Course: Test Site for Bootstrap">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors, Marin Balabanov (adaptations)">
+    <title>SmartNinja WebDev</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bsshop/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/bsshop/starter.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="/static/img/bsshop/logo.png" alt="SmartNinja" id="logopic">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#productarea">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#pricingarea">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Extras</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item"  data-toggle="modal" data-target="#product1Modal">Trigger Image Modal</a>
+          <a class="dropdown-item"   data-toggle="modal" data-target="#registerPaidModal">Trigger Subscribe Modal</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0"></li>
+    <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/static/img/bsshop/hero2.jpg" alt="Drive a Smart and be a ninja">
+      <div class="container">
+        <div class="carousel-caption text-right">
+          <h1>SmartNinja</h1>
+          <p>Drive a Smart.<br><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@suehughes?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from sue hughes"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">sue hughes</span></a></p>
+          <p><a class="btn btn-lg btn-primary" href="#pricingarea" role="button">Pricing</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/img/bsshop/hero1.jpg" alt="Be a ninja and drive a Smart">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>SmartNinja</h1>
+          <p>Be a ninja!<br><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@aiiveny?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Aisha Askhadova"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Aisha Askhadova</span></a></p>
+          <p><a class="btn btn-lg btn-primary" href="#albumarea" role="button">Products</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+  <main role="main">
+
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="albumarea">
+      <h1 class="jumbotron-heading">Products</h1>
+    </div>
+
+    <div class="album py-5 bg-light" >
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <a href="#"><img src="/static/img/bsshop/product1-small.jpg" alt="Socks" width="100%" height="225"></a>
+              <div class="card-body">
+                <h3 class="card-text"><a href="#">Socks</a></h3>
+                <p class="card-text"><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@vfbranciforti?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Vincent Branciforti"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Vincent Branciforti</span></a><br>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-primary" href="#" role="button">Product Page</a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#product1Modal">Zoom</button>
+                  </div>
+                  <small class="text-muted">12 in stock</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="product1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Socks</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="/static/img/bsshop/product1-large.jpg" alt="Socks"><br>
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@vfbranciforti?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Vincent Branciforti"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Vincent Branciforti</span></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  <a class="btn btn-xs btn-primary" href="product1.html" role="button">Product Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <a href="product1.html"><img src="/static/img/bsshop/product2-small.jpg" alt="Shoes" width="100%" height="225"></a>
+              <div class="card-body">
+                <h3 class="card-text"><a href="product1.html">Shoes</a></h3>
+                <p class="card-text">
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@awrotker?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Alexander Rotker"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Alexander Rotker</span></a><br>
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-primary" href="product1.html" role="button">Product Page</a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#product2Modal">Zoom</button>
+                  </div>
+                  <small class="text-muted">9 in stock</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="product2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Shoes</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="/static/img/bsshop/product2-large.jpg" alt="Shoes"><br>
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@awrotker?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Alexander Rotker"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Alexander Rotker</span></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  <a class="btn btn-xs btn-primary" href="product1.html" role="button">Product Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <a href="product1.html"><img src="/static/img/bsshop/product3-small.jpg" alt="Microphone" width="100%" height="225"></a>
+              <div class="card-body">
+                <h3 class="card-text"><a href="product1.html">Microphone</a></h3>
+                <p class="card-text">
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@padraigo?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Padraig Treanor"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Padraig Treanor</span></a><br>
+                  Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-primary" href="product1.html" role="button">Product Page</a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#product3Modal">Zoom</button>
+                  </div>
+                  <small class="text-muted">4 in stock</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="product3Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Microphone</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="/static/img/bsshop/product3-large.jpg" alt="Microphone"><br>
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@padraigo?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Padraig Treanor"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Padraig Treanor</span></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  <a class="btn btn-xs btn-primary" href="product1.html" role="button">Product Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <a href="product1.html"><img src="/static/img/bsshop/product4-small.jpg" alt="Bananas" width="100%" height="225"></a>
+              <div class="card-body">
+                <h3 class="card-text"><a href="product1.html">Bananas</a></h3>
+                <p class="card-text">
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@brett_jordan?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Brett Jordan"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Brett Jordan</span></a><br>
+                  Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-primary" href="product1.html" role="button">Product Page</a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#product4Modal">Zoom</button>
+                  </div>
+                  <small class="text-muted">2 in stock</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="product4Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Bananas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="/static/img/bsshop/product4-large.jpg" alt="Bananas"><br>
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@brett_jordan?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Brett Jordan"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Brett Jordan</span></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  <a class="btn btn-xs btn-primary" href="product1.html" role="button">Product Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <a href="product1.html"><img src="/static/img/bsshop/product5-small.jpg" alt="Headphones" width="100%" height="225"></a>
+              <div class="card-body">
+                <h3 class="card-text"><a href="product1.html">Headphones</a></h3>
+                <p class="card-text">
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@maltewingen?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Malte Wingen"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Malte Wingen</span></a><br>
+                  Phasellus viverra nulla ut metus varius laoreet. Maecenas tempus.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-primary" href="product1.html" role="button">Product Page</a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#product5Modal">Zoom</button>
+                  </div>
+                  <small class="text-muted">11 in stock</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="product5Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Headphones</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="/static/img/bsshop/product5-large.jpg" alt="Headphones"><br>
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@maltewingen?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Malte Wingen"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Malte Wingen</span></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  <a class="btn btn-xs btn-primary" href="product1.html" role="button">Product Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <a href="product1.html"><img src="/static/img/bsshop/product6-small.jpg" alt="Diary" width="100%" height="225"></a>
+              <div class="card-body">
+                <h3 class="card-text"><a href="product1.html">Diary</a></h3>
+                <p class="card-text">
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@studiomediainc?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Studio Media"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Studio Media</span></a><br>
+                  Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a class="btn btn-primary" href="product1.html" role="button">Product Page</a>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#product6Modal">Zoom</button>
+                  </div>
+                  <small class="text-muted">Stock: 2</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="product6Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Diary</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="/static/img/bsshop/product6-large.jpg" alt="Diary"><br>
+                  <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@studiomediainc?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Studio Media"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Studio Media</span></a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                  <a class="btn btn-xs btn-primary" href="product1.html" role="button">Product Page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" id="pricingarea">
+    <h1 class="display-4">Pricing</h1>
+  </div>
+
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Free</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>10 users included</li>
+            <li>2 GB of storage</li>
+            <li>Email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary"  data-toggle="modal" data-target="#registerFreeModal">Sign up for free</button>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Pro</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>20 users included</li>
+            <li>10 GB of storage</li>
+            <li>Priority email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary"  data-toggle="modal" data-target="#registerPaidModal">Get started</button>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">Enterprise</h4>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>30 users included</li>
+            <li>15 GB of storage</li>
+            <li>Phone and email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary"  data-toggle="modal" data-target="#registerPaidModal">Get started</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Register Free Modal -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1"  id="registerFreeModal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" align="center">
+         <div class="col-md-8 order-md-1">
+           <h4 class="mb-3">Register for Free Access</h4>
+           <form class="needs-validation" novalidate>
+             <div class="row">
+               <div class="col-md-6 mb-3">
+                 <label for="firstName">First name</label>
+                 <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                 <div class="invalid-feedback">
+                   Valid first name is required.
+                 </div>
+               </div>
+               <div class="col-md-6 mb-3">
+                 <label for="lastName">Last name</label>
+                 <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                 <div class="invalid-feedback">
+                   Valid last name is required.
+                 </div>
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="username">Username</label>
+               <div class="input-group">
+                 <div class="input-group-prepend">
+                   <span class="input-group-text">@</span>
+                 </div>
+                 <input type="text" class="form-control" id="username" placeholder="Username" required>
+                 <div class="invalid-feedback" style="width: 100%;">
+                   Your username is required.
+                 </div>
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="email">Email <span class="text-muted">(Optional)</span></label>
+               <input type="email" class="form-control" id="email" placeholder="you@example.com">
+               <div class="invalid-feedback">
+                 Please enter a valid email address for shipping updates.
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="address">Address</label>
+               <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+               <div class="invalid-feedback">
+                 Please enter your address.
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+               <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+             </div>
+
+             <div class="row">
+               <div class="col-md-5 mb-3">
+                 <label for="country">Country</label>
+                 <select class="custom-select d-block w-100" id="country" required>
+                   <option value="">Choose...</option>
+                   <option>United States</option>
+                 </select>
+                 <div class="invalid-feedback">
+                   Please select a valid country.
+                 </div>
+               </div>
+               <div class="col-md-4 mb-3">
+                 <label for="state">State</label>
+                 <select class="custom-select d-block w-100" id="state" required>
+                   <option value="">Choose...</option>
+                   <option>California</option>
+                 </select>
+                 <div class="invalid-feedback">
+                   Please provide a valid state.
+                 </div>
+               </div>
+               <div class="col-md-3 mb-3">
+                 <label for="zip">Zip</label>
+                 <input type="text" class="form-control" id="zip" placeholder="" required>
+                 <div class="invalid-feedback">
+                   Zip code required.
+                 </div>
+               </div>
+             </div>
+             <hr class="mb-4">
+             <div class="custom-control custom-checkbox">
+               <input type="checkbox" class="custom-control-input" id="same-address">
+               <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+             </div>
+             <div class="custom-control custom-checkbox">
+               <input type="checkbox" class="custom-control-input" id="save-info">
+               <label class="custom-control-label" for="save-info">Save this information for next time</label>
+             </div>
+             <hr class="mb-4">
+             <p><button class="btn btn-primary btn-block" type="submit">Register</button></p>
+             <p><button type="button" class="btn btn-block btn-outline-primary" data-dismiss="modal">Close</button></p>
+           </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Register Paid Modal -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1"  id="registerPaidModal" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Register and Pay</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" align="center">
+         <div class="col-md-8 order-md-1">
+           <h4 class="mb-3">Register and Pay</h4>
+           <form class="needs-validation" novalidate>
+             <div class="row">
+               <div class="col-md-6 mb-3">
+                 <label for="firstName">First name</label>
+                 <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                 <div class="invalid-feedback">
+                   Valid first name is required.
+                 </div>
+               </div>
+               <div class="col-md-6 mb-3">
+                 <label for="lastName">Last name</label>
+                 <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                 <div class="invalid-feedback">
+                   Valid last name is required.
+                 </div>
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="username">Username</label>
+               <div class="input-group">
+                 <div class="input-group-prepend">
+                   <span class="input-group-text">@</span>
+                 </div>
+                 <input type="text" class="form-control" id="username" placeholder="Username" required>
+                 <div class="invalid-feedback" style="width: 100%;">
+                   Your username is required.
+                 </div>
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="email">Email <span class="text-muted">(Optional)</span></label>
+               <input type="email" class="form-control" id="email" placeholder="you@example.com">
+               <div class="invalid-feedback">
+                 Please enter a valid email address for shipping updates.
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="address">Address</label>
+               <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+               <div class="invalid-feedback">
+                 Please enter your shipping address.
+               </div>
+             </div>
+
+             <div class="mb-3">
+               <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+               <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+             </div>
+
+             <div class="row">
+               <div class="col-md-5 mb-3">
+                 <label for="country">Country</label>
+                 <select class="custom-select d-block w-100" id="country" required>
+                   <option value="">Choose...</option>
+                   <option>United States</option>
+                 </select>
+                 <div class="invalid-feedback">
+                   Please select a valid country.
+                 </div>
+               </div>
+               <div class="col-md-4 mb-3">
+                 <label for="state">State</label>
+                 <select class="custom-select d-block w-100" id="state" required>
+                   <option value="">Choose...</option>
+                   <option>California</option>
+                 </select>
+                 <div class="invalid-feedback">
+                   Please provide a valid state.
+                 </div>
+               </div>
+               <div class="col-md-3 mb-3">
+                 <label for="zip">Zip</label>
+                 <input type="text" class="form-control" id="zip" placeholder="" required>
+                 <div class="invalid-feedback">
+                   Zip code required.
+                 </div>
+               </div>
+             </div>
+             <hr class="mb-4">
+             <div class="custom-control custom-checkbox">
+               <input type="checkbox" class="custom-control-input" id="same-address">
+               <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+             </div>
+             <div class="custom-control custom-checkbox">
+               <input type="checkbox" class="custom-control-input" id="save-info">
+               <label class="custom-control-label" for="save-info">Save this information for next time</label>
+             </div>
+             <hr class="mb-4">
+
+             <h4 class="mb-3">Payment</h4>
+
+             <div class="d-block my-3">
+               <div class="custom-control custom-radio">
+                 <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                 <label class="custom-control-label" for="credit">Credit card</label>
+               </div>
+               <div class="custom-control custom-radio">
+                 <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                 <label class="custom-control-label" for="debit">Debit card</label>
+               </div>
+               <div class="custom-control custom-radio">
+                 <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                 <label class="custom-control-label" for="paypal">PayPal</label>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-md-6 mb-3">
+                 <label for="cc-name">Name on card</label>
+                 <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                 <small class="text-muted">Full name as displayed on card</small>
+                 <div class="invalid-feedback">
+                   Name on card is required
+                 </div>
+               </div>
+               <div class="col-md-6 mb-3">
+                 <label for="cc-number">Credit card number</label>
+                 <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                 <div class="invalid-feedback">
+                   Credit card number is required
+                 </div>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-md-3 mb-3">
+                 <label for="cc-expiration">Expiration</label>
+                 <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                 <div class="invalid-feedback">
+                   Expiration date required
+                 </div>
+               </div>
+               <div class="col-md-3 mb-3">
+                 <label for="cc-cvv">CVV</label>
+                 <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                 <div class="invalid-feedback">
+                   Security code required
+                 </div>
+               </div>
+             </div>
+             <hr class="mb-4">
+             <p><button class="btn btn-primary btn-block" type="submit">Register</button></p>
+             <p><button type="button" class="btn btn-block btn-outline-primary" data-dismiss="modal">Close</button></p>
+           </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Example for training purposes.</p>
+    <p>Please visit <a href="http://smartninja.at">SmartNinja Austria</a> for more information.</p>
+  </div>
+</footer>
+
+<script src="/static/js/bsshop/jquery-slim.min.js" ></script>
+<script src="/static/js/bsshop/bootstrap.bundle.min.js" ></script>
+</body>
+</html>
