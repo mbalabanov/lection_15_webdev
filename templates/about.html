@@ -3,4 +3,13 @@
         <h1>About</h1>
         <p>Das Datum ist {{ datumsanzeige }}</p>
         <p>Der Username lautet {{ useranzeige }}</p>
+        <ul>
+            {% for element in foo %}
+            <li>{{ element }}
+            {% if element % 3 %}
+            Wow!
+            {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
 {% endblock body %}

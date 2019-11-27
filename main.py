@@ -13,18 +13,23 @@ counter = 0
 def index():
     global counter
     counter += 1
-    return render_template("index.html", htmlzaehler=counter)
+    active = "active"
+    return render_template("index.html", active1 = active)
 
 @app.route("/about")
 def about():
+    # blabla = ["Hello 00", "Hello 01", "Hello 02", "Hello 03", "Hello 04"]
+    blabla = range(100)
     datum = datetime.datetime.now()
     user = requests.get('https://jsonplaceholder.typicode.com/users/1').json()["name"]
-    return render_template("about.html", datumsanzeige=datum, useranzeige=user)
+    active = "active"
+    return render_template("about.html", datumsanzeige=datum, useranzeige=user, foo=blabla, active2=active)
 
 @app.route("/portfolio")
 def portfolio():
     todo = requests.get('https://jsonplaceholder.typicode.com/todos/1').json()["title"]
-    return render_template("portfolio.html", anzeigetodos=todo)
+    active = "active"
+    return render_template("portfolio.html", anzeigetodos=todo, active3=active)
 
 @app.route("/portfolio/boogle")
 def boogle():
@@ -45,6 +50,7 @@ def hans():
 @app.route("/portfolio/simpleshop")
 def simpleshop():
     return render_template("simpleshop.html")
+
 
 # Wenn dieses Modul das Hauptmodul ist, dann starten wir Flask
 if __name__ == '__main__':

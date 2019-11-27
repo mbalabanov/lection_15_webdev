@@ -1,10 +1,90 @@
 {% extends "base.html" %}
 {% block body %}
-    <h1>Hello world</h1>
-    <p>Lorem Ipsum Dolor. Marin Balabanov.</p>
-    <p>Hier steht der Counter: {{ htmlzaehler }}</p>
-    <p><a href="/">Index</a></p>
-    <p><a href="/about">About</a></p>
-    <p><a href="/portfolio">Portfolio</a></p>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">This app is running on Heroku</h1>
+          <p class="lead mb-5 text-white-50">
+            "I am not young enough to know everything."<br>
+            <strong>― Oscar Wilde</strong></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>From the Picture of Dorian Gray</h2>
+        <hr>
+        <p>This simple app was developed during the Smartninja course Webdevelopment I. Here is a quote from Oscar Wilde's famous novel as a placeholder.</p>
+        <p>"Those who find ugly meanings in beautiful things are corrupt without being charming. This is a fault. Those who find beautiful meanings in beautiful things are the cultivated. For these there is hope. They are the elect to whom beautiful things mean only Beauty. There is no such thing as a moral or an immoral book. Books are well written, or badly written. That is all."</p>
+        <a class="btn btn-primary btn-lg" href="/about">About this App &raquo;</a>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Technologies Used</h2>
+        <hr>
+        <ul>
+          <li><strong>Heroku</strong> - Cloud Platform as a Service</li>
+          <li><strong>Bootstrap</strong> - Frontend Framework</li>
+          <li><strong>Flask</strong> - Micro Web Framework based on Python</li>
+          <li><strong>Jinja</strong> - Web Template Engine</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="/static/img/portfolio-hans.jpg" alt="Site for Hairdresser Hans">
+          <div class="card-body">
+            <h4 class="card-title">Hairdresser Hans</h4>
+            <p class="card-text">This is a test page using an adapted Bootstrap theme for a fictional hardresser going by the flamboyant name of Hans.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/portfolio/hans" target="_blank" class="btn btn-primary">See site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="/static/img/portfolio-boogle.jpg" alt="Simple Google knock-off called Boogle">
+          <div class="card-body">
+            <h4 class="card-title">Boogle</h4>
+            <p class="card-text">This is a quick and simple knock-off of the Google frontpage.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/portfolio/boogle" target="_blank" class="btn btn-primary">See site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="/static/img/portfolio-snshop.jpg" alt="Fictional Smartninja Webshop">
+          <div class="card-body">
+            <h4 class="card-title">Smartninja Webshop</h4>
+            <p class="card-text">Another adapted Bootstrap theme for a fictional Smartninja webshop.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/portfolio/shop" target="_blank" class="btn btn-primary">See site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+      <div class="col-md-12 mb-12 text-center">
+        <p><a class="btn btn-primary btn-lg" href="/portfolio">Full Portfolio &raquo;</a></p>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
 {% endblock body %}
