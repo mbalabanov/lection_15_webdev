@@ -1,14 +1,96 @@
 {% extends "base.html" %}
 {% block body %}
-        <h1>Portfolio</h1>
-        <p>Das ist das Portfolio mit den folgenden Dingen:<br>{{ anzeigetodos }}</p>
-        <h2>Links to Sites:</h2>
+  <div class="container">
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h1>Portfolio</h1>
+      <p>Das ist das Portfolio mit den folgenden Dingen:<br>{{ anzeigetodos }} (<-- Dieser Wert kommt über eine API.)</p>
+
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="/static/img/portfolio-hans.jpg" alt="Site for Hairdresser Hans">
+          <div class="card-body">
+            <h4 class="card-title">Hairdresser Hans</h4>
+            <p class="card-text">This is a test page using an adapted Bootstrap theme for a fictional hardresser going by the flamboyant name of Hans.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/portfolio/hans" target="_blank" class="btn btn-primary">See site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="/static/img/portfolio-boogle.jpg" alt="Simple Google knock-off called Boogle">
+          <div class="card-body">
+            <h4 class="card-title">Boogle</h4>
+            <p class="card-text">This is a quick and simple knock-off of the Google frontpage.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/portfolio/boogle" target="_blank" class="btn btn-primary">See site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="/static/img/portfolio-snshop.jpg" alt="Fictional Smartninja Webshop">
+          <div class="card-body">
+            <h4 class="card-title">Smartninja Webshop</h4>
+            <p class="card-text">Another adapted Bootstrap theme for a fictional Smartninja webshop.</p>
+          </div>
+          <div class="card-footer">
+            <a href="/portfolio/shop" target="_blank" class="btn btn-primary">See site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <h2>All Links</h2>
         <p>Links open in new tab.</p>
-        <ul>
-            <li><a href="/portfolio/fakebook" target="_blank">Fakebook</a></li>
-            <li><a href="/portfolio/boogle" target="_blank">Boogle</a></li>
-            <li><a href="/portfolio/simpleshop" target="_blank">Simple Shop</a></li>
-            <li><a href="/portfolio/shop" target="_blank">Shop</a></li>
-            <li><a href="/portfolio/hans" target="_blank">Hairdresser Hans</a></li>
-        </ul>
+
+<div class="row">
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Fakebook</h5>
+                <h6 class="card-subtitle mb-2 text-muted">HTML/CSS Exercise</h6>
+                <p class="card-text">A quick and simple exercise in HTML and CSS to create an approximation of a simple Facebook user profile.</p>
+                <a href="#" class="/portfolio/fakebook" target="_blank">Fakebook</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Simple Shop</h5>
+                <h6 class="card-subtitle mb-2 text-muted">HTML/CSS Exercise</h6>
+                <p class="card-text">This is the layout of the simnple frontpage of a webshop.</p>
+                <a href="#" class="/portfolio/simpleshop" target="_blank">Simple Shop</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Shop</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Bootstrap Exercise</h6>
+                <p class="card-text">This is the more elaborate frontpage of an online shop using Bootstrap and images from Unsplash.</p>
+                <a href="#" class="/portfolio/shop" target="_blank">Shop</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Hairdresser Hans</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Bootstrap Exercise</h6>
+                <p class="card-text">This is another Bootstrap exercise using images from Unsplash.</p>
+                <a href="#" class="/portfolio/hans" target="_blank">Hairdresser Hans</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
 {% endblock body %}
